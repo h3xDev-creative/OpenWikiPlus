@@ -1,0 +1,20 @@
+<h1>Edit Topic: <%= @wiki_topic.title %></h1>
+
+<%= form_with model: @wiki_topic, local: true do |form| %>
+  <div class="form-group">
+    <%= form.label :title, 'Topic Title' %>
+    <%= form.text_field :title, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :content, 'Topic Content' %>
+    <%= form.text_area :content, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.submit 'Update Topic', class: 'btn btn-primary' %>
+  </div>
+<% end %>
+
+<%= link_to 'Back to Topic', wiki_topic_path(@wiki_topic) %> |
+<%= link_to 'Back to Topics', wiki_wiki_topics_path(@wiki) %>

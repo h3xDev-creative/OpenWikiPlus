@@ -1,0 +1,5 @@
+en:
+  hello: "Hello, OpenWikiPlus!"
+  users:
+    settings:
+      theme: "Select your theme"

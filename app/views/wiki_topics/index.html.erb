@@ -1,0 +1,18 @@
+<h1>Topics for Wiki: <%= @wiki.title %></h1>
+
+<% if @wiki.wiki_topics.present? %>
+  <ul>
+    <% @wiki.wiki_topics.each do |topic| %>
+      <li>
+        <%= link_to topic.title, wiki_topic_path(topic) %> 
+        <%= link_to 'Edit', edit_wiki_topic_path(topic) %> |
+        <%= link_to 'Delete', wiki_topic_path(topic), method: :delete, data: { confirm: 'Are you sure you want to delete this topic?' } %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No topics yet. <%= link_to 'Create a topic', new_wiki_wiki_topic_path(@wiki) %></p>
+<% end %>
+
+<%= link_to 'Back to Wiki', wiki_path(@wiki) %>
+<%= link_to 'Create New Topic', new_wiki_wiki_topic_path(@wiki) %>

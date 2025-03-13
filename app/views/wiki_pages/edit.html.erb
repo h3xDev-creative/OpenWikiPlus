@@ -1,0 +1,21 @@
+<h1>Edit Page: <%= @wiki_page.title %></h1>
+
+<%= form_with model: @wiki_page, local: true do |form| %>
+  <div class="form-group">
+    <%= form.label :title, 'Page Title' %>
+    <%= form.text_field :title, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :content, 'Page Content' %>
+    <%= form.text_area :content, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.submit 'Update Page', class: 'btn btn-primary' %>
+  </div>
+<% end %>
+
+<%= link_to 'Back to Page', wiki_page_path(@wiki_page) %> |
+<%= link_to 'Back to Topic', wiki_topic_path(@wiki_topic) %> |
+<%= link_to 'Back to Pages', wiki_wiki_topic_wiki_pages_path(@wiki, @wiki_topic) %>
