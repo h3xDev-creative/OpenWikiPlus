@@ -14,7 +14,7 @@ Designed for simplicity, flexibility, and **pure wiki awesomeness** 🎉.
 
 1️⃣ Clone the repository:  
 ```bash
-git clone https://github.com/yourusername/openwikiplus.git
+git clone https://github.com/h3xDev-Creative/openwikiplus.git
 cd openwikiplus
 ```
 
